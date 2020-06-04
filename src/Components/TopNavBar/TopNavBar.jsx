@@ -5,7 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import DescriptionIcon from "@material-ui/icons/Description";
+import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +30,12 @@ const TopNavBar = () => {
           <Typography variant="h6" className={classes.title}>
             Portfolio
           </Typography>
-          <Button color="inherit">Resume</Button>
+          <IconButton color="secondary">
+            <DescriptionIcon />
+          </IconButton>
+          <IconButton>
+            <ContactPhoneIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>

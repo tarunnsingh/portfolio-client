@@ -1,5 +1,6 @@
 import React from "react";
 import Topbar from "../Sections/Topbar";
+import IntroSection from "../Sections/IntroSection";
 import { Grid, AppBar, Button, Typography } from "@material-ui/core";
 
 const Home = () => {
@@ -8,7 +9,9 @@ const Home = () => {
       <Grid item>
         <Topbar />
       </Grid>
-      <Grid item>Hi I am Tarun Section</Grid>
+      <Grid item container direction="row" justify="center" alignItems="center">
+        <IntroSection />
+      </Grid>
       <Grid item>About Me Section</Grid>
       <Grid item>Projects</Grid>
       <Grid item>Notable Achievements</Grid>

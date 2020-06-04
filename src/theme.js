@@ -4,8 +4,12 @@ import green from "@material-ui/core/colors/green";
 
 const theme = createMuiTheme({
   palette: {
-    primary: purple,
-    secondary: green,
+    primary: {
+      main: "#6d1b7b",
+    },
+    secondary: {
+      main: "#f50057",
+    },
   },
   status: {
     danger: "orange",
