@@ -8,6 +8,7 @@ const useStyles = makeStyles(() => ({
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+    color: "white",
   },
 }));
 

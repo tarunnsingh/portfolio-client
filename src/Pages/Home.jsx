@@ -9,7 +9,7 @@ const Home = () => {
       <Grid item>
         <Topbar />
       </Grid>
-      <Grid item container direction="row" justify="center" alignItems="center">
+      <Grid item>
         <IntroSection />
       </Grid>
       <Grid item>About Me Section</Grid>
