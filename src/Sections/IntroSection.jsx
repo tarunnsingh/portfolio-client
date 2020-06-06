@@ -4,6 +4,7 @@ import TypingIntro from "../Components/TypingIntro/TypingIntro";
 import HiIntro from "../Components/HiIntro/HiIntro";
 import { makeStyles } from "@material-ui/styles";
 import theme from "../theme";
+import { ParallaxLayer, Parallax } from "react-spring/renderprops-addons";
 
 const useStyles = makeStyles((theme) => ({
   gutterUp: {
@@ -20,16 +21,24 @@ const useStyles = makeStyles((theme) => ({
 const IntroSection = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="column" justify="center" alignItems="center">
-      <Grid item className={classes.gutterUp} />
-      <Grid item xs="12" sm="12">
-        <HiIntro />
+    <ParallaxLayer
+      offset={0.1}
+      speed={2}
+      style={{
+        backgroundColor: "#805E73",
+      }}
+    >
+      <Grid container direction="column" justify="center" alignItems="center">
+        <Grid item className={classes.gutterUp} />
+        <Grid item xs={12} sm={10}>
+          <HiIntro />
+        </Grid>
+        <Grid item>
+          <TypingIntro />
+        </Grid>
+        <Grid item className={classes.gutterDown} />
       </Grid>
-      <Grid item>
-        <TypingIntro />
-      </Grid>
-      <Grid item className={classes.gutterDown} />
-    </Grid>
+    </ParallaxLayer>
   );
 };
 
