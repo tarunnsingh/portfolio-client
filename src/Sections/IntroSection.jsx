@@ -28,7 +28,13 @@ const IntroSection = () => {
     //     backgroundColor: "#805E73",
     //   }}
     // >
-    <Grid container direction="column" justify="center" alignItems="center">
+    <Grid
+      item
+      container
+      direction="column"
+      justify="center"
+      alignItems="center"
+    >
       <Grid item className={classes.gutterUp} />
       <Grid item xs={12} sm={10}>
         <HiIntro />

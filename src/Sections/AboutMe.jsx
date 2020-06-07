@@ -5,6 +5,7 @@ import banner from "../Static/banner.jpg";
 import { Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Me from "../Static/me.jpg";
+import TextAbout from "../Components/TextAbout/TextAbout";
 
 const useStyles = makeStyles((theme) => ({
   aboutText: {
@@ -19,16 +20,13 @@ const AboutMe = () => {
   const classes = useStyles();
   return (
     <Fragment>
-      {/* <ParallaxLayer
-        offset={1}
-        speed={0.5}
-        style={{ backgroundColor: "#011173" }}
-      /> */}
       <Grid container direction="row">
         <Grid item xs={6}>
           <img className={classes.imgStyle} src={`${Me}`} />
         </Grid>
+
         <Grid item xs={6}>
+          <TextAbout />
           <Typography className={classes.aboutText}>
             Hi, I am Tarun. Currently persuing B.Tech (CSE) from The LNM
             Institute of Information Technology, Jaipur. I work in MERN Stack
