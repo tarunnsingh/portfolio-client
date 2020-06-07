@@ -21,24 +21,24 @@ const useStyles = makeStyles((theme) => ({
 const IntroSection = () => {
   const classes = useStyles();
   return (
-    <ParallaxLayer
-      offset={0.1}
-      speed={2}
-      style={{
-        backgroundColor: "#805E73",
-      }}
-    >
-      <Grid container direction="column" justify="center" alignItems="center">
-        <Grid item className={classes.gutterUp} />
-        <Grid item xs={12} sm={10}>
-          <HiIntro />
-        </Grid>
-        <Grid item>
-          <TypingIntro />
-        </Grid>
-        <Grid item className={classes.gutterDown} />
+    // <ParallaxLayer
+    //   offset={0.1}
+    //   speed={2}
+    //   style={{
+    //     backgroundColor: "#805E73",
+    //   }}
+    // >
+    <Grid container direction="column" justify="center" alignItems="center">
+      <Grid item className={classes.gutterUp} />
+      <Grid item xs={12} sm={10}>
+        <HiIntro />
       </Grid>
-    </ParallaxLayer>
+      <Grid item>
+        <TypingIntro />
+      </Grid>
+      <Grid item className={classes.gutterDown} />
+    </Grid>
+    // </ParallaxLayer>
   );
 };
 

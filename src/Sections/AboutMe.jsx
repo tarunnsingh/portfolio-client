@@ -2,23 +2,50 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import banner from "../Static/banner.jpg";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+import Me from "../Static/me.jpg";
 
-// const url = (name, wrap = false) =>
-//   `${
-//     wrap ? "url(" : ""
-//   }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
-//     wrap ? ")" : ""
-//   }`;
+const useStyles = makeStyles((theme) => ({
+  aboutText: {
+    color: "white",
+  },
+  imgStyle: {
+    height: "50vh",
+  },
+}));
 
 const AboutMe = () => {
+  const classes = useStyles();
   return (
     <Fragment>
-      <ParallaxLayer
-        offset={}
-        speed={0}
+      {/* <ParallaxLayer
+        offset={1}
+        speed={0.5}
         style={{ backgroundColor: "#011173" }}
-      />
+      /> */}
+      <Grid container direction="row">
+        <Grid item xs={6}>
+          <img className={classes.imgStyle} src={`${Me}`} />
+        </Grid>
+        <Grid item xs={6}>
+          <Typography className={classes.aboutText}>
+            Hi, I am Tarun. Currently persuing B.Tech (CSE) from The LNM
+            Institute of Information Technology, Jaipur. I work in MERN Stack
+            for development and also love to explore the concepts of Data
+            Science. Currently persuing B.Tech (CSE) from The LNM Institute of
+            Information Technology, Jaipur. I work in MERN Stack for development
+            and also love to explore the concepts of Data Science. Currently
+            persuing B.Tech (CSE) from The LNM Institute of Information
+            Technology, Jaipur. I work in MERN Stack for development and also
+            love to explore the concepts of Data Science.Currently persuing
+            B.Tech (CSE) from The LNM Institute of Information Technology,
+            Jaipur. I work in MERN Stack for development and also love to
+            explore the concepts of Data Science.
+          </Typography>
+        </Grid>
+      </Grid>
+
       <Typography variant="h4">About</Typography>
     </Fragment>
   );
