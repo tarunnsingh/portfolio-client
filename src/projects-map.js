@@ -11,6 +11,17 @@ const projects = [
     link: "https://github.com/tarunnsingh/Instagram-Bot",
   },
   {
+    name: "Personal Space",
+    description:
+      "A full-stack webapp, where users can have their personal notes and can upload music and photos, which can be shared in the explore section.",
+    labels: ["React", "React-Bootstrap", "JWT Google Auth"],
+    imgUrl:
+      "https://cdn.dribbble.com/users/89403/screenshots/1897114/laptop.gif",
+    altTitle: "Personal Space Logo",
+    type: "WebDev",
+    link: "https://github.com/tarunnsingh/personal-space",
+  },
+  {
     name: "Face Morphing",
     description:
       "This project is a webapp that lets you upload two images and gives you back a morph gif of the faces present within.",
@@ -44,15 +55,37 @@ const projects = [
     link: "https://tarunnsingh.github.io/alexa-dev-hub/",
   },
   {
-    name: "Personal Space",
+    name: "Office Checkin App",
     description:
-      "A full-stack webapp, where users can have their personal notes and can upload music and photos, which can be shared in the explore section.",
-    labels: ["React", "React-Bootstrap", "JWT Auth", "Google OAuth"],
+      "This app handles checkin and checkout system of any office. Real time SMS and emails are sent to hosts and guests.",
+    labels: ["NodeJS", "Twillio", "Bootstrap"],
     imgUrl:
-      "https://cdn.dribbble.com/users/89403/screenshots/1897114/laptop.gif",
-    altTitle: "Personal Space Logo",
+      "https://cdn.dribbble.com/users/952303/screenshots/3483914/comp_1_6.gif",
+    altTitle: "Office Chekin App Logo",
+    type: "WebDev",
+    link: "https://thawing-gorge-92211.herokuapp.com/",
+  },
+  {
+    name: "ReVoice",
+    description:
+      "NLP and Computer Vision based smart review check system. This projects provides functionality to review and classify reviews on client-side.",
+    labels: ["CV", "NLP", "Flask"],
+    imgUrl:
+      "https://github.com/tarunnsingh/ReVoice/blob/master/revoice.png?raw=true",
+    altTitle: "ReVoice Logo",
+    type: "Data Science",
+    link: "https://github.com/tarunnsingh/ReVoice",
+  },
+  {
+    name: "Crypto Assist",
+    description:
+      "A Google action to fulfill all your crypto needs. With using only your voice you can get latest trends of almost all crypto coins.",
+    labels: ["NodeJS", "Dialogflow", "Firebase"],
+    imgUrl: "https://developers.google.com/assistant/assistant.png",
+    altTitle: "Crypto Assist Logo",
     type: "Other",
-    link: "https://github.com/tarunnsingh/personal-space",
+    link:
+      "https://assistant.google.com/services/a/uid/0000007451b2eca2?source=web",
   },
 ];
 

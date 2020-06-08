@@ -3,6 +3,7 @@ import Topbar from "../Sections/Topbar";
 import IntroSection from "../Sections/IntroSection";
 import AboutMe from "../Sections/AboutMe";
 import Projects from "../Sections/Projects";
+import Achievements from "../Sections/Achievements";
 import { Grid, AppBar, Button, Typography, Paper } from "@material-ui/core";
 import { Parallax } from "react-spring/renderprops-addons";
 import { makeStyles } from "@material-ui/styles";
@@ -33,7 +34,9 @@ const Home = () => {
       <Grid item>
         <Projects />
       </Grid>
-      <Grid item>Notable Achievements</Grid>
+      <Grid item>
+        <Achievements />
+      </Grid>
       <Grid item>What else?</Grid>
       <Grid item>My thoughts / theories</Grid>
       <Grid item>Let's Connect</Grid>

@@ -9,10 +9,17 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
 import { Grid } from "@material-ui/core";
-
+import IconButton from "@material-ui/core/IconButton";
+import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
+import styles from "./ProjectCard.module.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    borderRadius: "25px",
+    "&:hover": {
+      boxShadow: "1px 1px 2px 3px #671d9d",
+    },
   },
   media: {
     height: 140,
@@ -23,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ProjectCard = (props) => {
+  const [like, setLike] = useState(false);
+  const handleLike = () => {
+    setLike(!like);
+  };
   const {
     imgUrl,
     altTitle,
@@ -66,12 +77,25 @@ const ProjectCard = (props) => {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="secondary">
-              Share
-            </Button>
+            <IconButton
+              aria-label="Like Project"
+              color="secondary"
+              onClick={handleLike}
+            >
+              {like ? <ThumbUpAltIcon /> : <ThumbUpAltOutlinedIcon />}
+            </IconButton>
             <Button size="small" color="secondary" href={link}>
               Learn More
             </Button>
+            {name === "Face Morphing" ? (
+              <Button
+                size="small"
+                color="secondary"
+                href="https://github.com/tarunnsingh/morph-server/blob/master/Sample.mp4"
+              >
+                See Video
+              </Button>
+            ) : null}
           </CardActions>
         </Card>
       )}
