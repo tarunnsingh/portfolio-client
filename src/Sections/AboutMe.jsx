@@ -6,10 +6,13 @@ import { Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Me from "../Static/me.jpg";
 import TextAbout from "../Components/TextAbout/TextAbout";
+import Quote from "../Components/Quote/Quote";
 
 const useStyles = makeStyles((theme) => ({
   aboutText: {
     color: "white",
+    textAlign: "justify",
+    alignItems: "center",
   },
   imgStyle: {
     height: "50vh",
@@ -19,33 +22,29 @@ const useStyles = makeStyles((theme) => ({
 const AboutMe = () => {
   const classes = useStyles();
   return (
-    <Fragment>
-      <Grid container direction="row">
-        <Grid item xs={6}>
-          <img className={classes.imgStyle} src={`${Me}`} />
-        </Grid>
-
-        <Grid item xs={6}>
-          <TextAbout />
-          <Typography className={classes.aboutText}>
-            Hi, I am Tarun. Currently persuing B.Tech (CSE) from The LNM
-            Institute of Information Technology, Jaipur. I work in MERN Stack
-            for development and also love to explore the concepts of Data
-            Science. Currently persuing B.Tech (CSE) from The LNM Institute of
-            Information Technology, Jaipur. I work in MERN Stack for development
-            and also love to explore the concepts of Data Science. Currently
-            persuing B.Tech (CSE) from The LNM Institute of Information
-            Technology, Jaipur. I work in MERN Stack for development and also
-            love to explore the concepts of Data Science.Currently persuing
-            B.Tech (CSE) from The LNM Institute of Information Technology,
-            Jaipur. I work in MERN Stack for development and also love to
-            explore the concepts of Data Science.
-          </Typography>
-        </Grid>
-      </Grid>
-
-      <Typography variant="h4">About</Typography>
-    </Fragment>
+    <Grid
+      item
+      container
+      direction="column"
+      justify="center"
+      alignItems="center"
+    >
+      <TextAbout />
+      <Typography className={classes.aboutText}>
+        Hi, I am Tarun. Currently persuing B.Tech (CSE) from The LNM Institute
+        of Information Technology, Jaipur. I work in MERN Stack for development
+        and also love to explore the concepts of Data Science. Currently
+        persuing B.Tech (CSE) from The LNM Institute of Information Technology,
+        Jaipur. I work in MERN Stack for development and also love to explore
+        the concepts of Data Science. Currently persuing B.Tech (CSE) from The
+        LNM Institute of Information Technology, Jaipur. I work in MERN Stack
+        for development and also love to explore the concepts of Data
+        Science.Currently persuing B.Tech (CSE) from The LNM Institute of
+        Information Technology, Jaipur. I work in MERN Stack for development and
+        also love to explore the concepts of Data Science.
+      </Typography>
+      <Quote />
+    </Grid>
   );
 };
 

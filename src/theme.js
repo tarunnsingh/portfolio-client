@@ -5,6 +5,7 @@ import Image from "./Static/bg2.jpg";
 
 const theme = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       main: "#6d1b7b",
     },

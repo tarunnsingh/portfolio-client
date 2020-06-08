@@ -21,13 +21,6 @@ const useStyles = makeStyles((theme) => ({
 const IntroSection = () => {
   const classes = useStyles();
   return (
-    // <ParallaxLayer
-    //   offset={0.1}
-    //   speed={2}
-    //   style={{
-    //     backgroundColor: "#805E73",
-    //   }}
-    // >
     <Grid
       item
       container
