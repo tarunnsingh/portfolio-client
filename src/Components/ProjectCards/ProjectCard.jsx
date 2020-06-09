@@ -12,6 +12,7 @@ import { Grid } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
+import Divider from "@material-ui/core/Divider";
 import styles from "./ProjectCard.module.css";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,6 +74,7 @@ const ProjectCard = (props) => {
               <Typography variant="body2" color="textSecondary" component="p">
                 {description}
               </Typography>
+              <Divider variant="inset" component="li" />
               <Typography>{labels.map((label) => label + " ")}</Typography>
             </CardContent>
           </CardActionArea>
