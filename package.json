@@ -2,7 +2,7 @@
   "name": "portfolio-new",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tarunnsingh.github.io/",
+  "homepage": "https://tarunnsingh.github.io/site",
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
