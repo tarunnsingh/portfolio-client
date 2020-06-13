@@ -67,6 +67,7 @@ const TopNavBar = () => {
               <AccountCircleIcon />
             </IconButton>
           </HtmlTooltip>
+          <Typography variant="button">Website in the Making</Typography>
           <div className={classes.end}>
             <Tooltip
               TransitionComponent={Fade}
