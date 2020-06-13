@@ -16,7 +16,6 @@ import Divider from "@material-ui/core/Divider";
 import styles from "./ProjectCard.module.css";
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
     borderRadius: "25px",
     "&:hover": {
       boxShadow: "1px 1px 2px 3px #671d9d",
@@ -50,7 +49,7 @@ const ProjectCard = (props) => {
   useEffect(() => {});
 
   return (
-    <>
+    <Grid item xs={12}>
       {!imgUrl ? null : (
         <Card className={classes.root}>
           <CardActionArea>
@@ -87,7 +86,7 @@ const ProjectCard = (props) => {
               {like ? <ThumbUpAltIcon /> : <ThumbUpAltOutlinedIcon />}
             </IconButton>
             <Button size="small" color="secondary" href={link}>
-              Learn More
+              Source Code
             </Button>
             {name === "Face Morphing" ? (
               <Button
@@ -101,7 +100,7 @@ const ProjectCard = (props) => {
           </CardActions>
         </Card>
       )}
-    </>
+    </Grid>
   );
 };
 

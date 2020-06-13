@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/styles";
 import theme from "../../theme";
 
 theme.typography.h3 = {
-  fontSize: "1.3rem",
+  fontSize: "2.2rem",
   "@media (min-width:600px)": {
     fontSize: "1.9rem",
   },
@@ -37,14 +37,13 @@ const HiIntro = () => {
             "Hola!",
             "Ciao!",
             "Salve!",
-            "Привет!",
             "Bonjour!",
           ]}
           interval={5000}
           springConfig={{ stiffness: 180, damping: 15 }}
         />
       </em>{" "}
-      I am Tarun
+      I am Tarun.
     </Typography>
   );
 };

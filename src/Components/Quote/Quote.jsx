@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import { makeStyles, withTheme } from "@material-ui/styles";
 import styles from "./Quote.module.css";
 
@@ -12,13 +12,19 @@ const useStyles = makeStyles((theme) => ({
 const Quote = () => {
   const classes = useStyles();
   return (
-    <article className={styles.container}>
-      <blockquote>
-        <strong>Imagination</strong> is <em>more important</em> than{" "}
-        <strong>knowledge</strong>
-      </blockquote>
-      <b>Einstein, A.</b>
-    </article>
+    <Grid container direction="row">
+      <Grid item xs={1} />
+      <Grid item xs={10}>
+        <article className={styles.container}>
+          <blockquote>
+            <strong>Imagination</strong> is <em>more important</em> than{" "}
+            <strong>knowledge</strong>
+          </blockquote>
+          <b>Einstein, A.</b>
+        </article>
+      </Grid>
+      <Grid item xs={1} />
+    </Grid>
   );
 };
 

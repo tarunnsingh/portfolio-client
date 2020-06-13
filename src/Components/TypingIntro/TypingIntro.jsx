@@ -25,15 +25,11 @@ const TypingIntro = () => {
             1000,
             "Data Science 👨‍🔬",
             1000,
-            "Talking 😄",
-            1000,
-            "Videography 📹",
+            "Film-Making 📹",
             1000,
             "Photgraphy 📷",
             1000,
             "Travel ⛰️",
-            1000,
-            "Gaming 🎮",
             1000,
           ]}
           loop={Infinity}

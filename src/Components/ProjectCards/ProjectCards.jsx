@@ -6,7 +6,7 @@ import projects from "../../projects-map";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    padding: "2%",
+    padding: "5%",
   },
 }));
 
@@ -20,15 +20,7 @@ const ProjectCards = () => {
   }, [projects]);
 
   return (
-    <Grid
-      item
-      container
-      direction="row"
-      justify="center"
-      alignItems="center"
-      spacing={5}
-      className={classes.container}
-    >
+    <Grid container direction="row" spacing={5} className={classes.container}>
       {!proj
         ? null
         : proj.map((project, idx) => {

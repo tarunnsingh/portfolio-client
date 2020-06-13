@@ -42,19 +42,19 @@ body {
 }
 
 .container {
-  width: 590px;
-  margin: 140px auto;
+  width: "50vw";
+  margin: auto;
   position: relative;
   color: #fff;
 }
 
 blockquote {
-  width: 565px;
+  width: "50vw";
   font: 2.65em CallunaRegular;
   letter-spacing: 0.075em;
   float: left;
   padding: 45px 0 30px 25px;
-  margin: 0;
+  margin: auto;
   border-top: 2px dotted #858585;
   border-bottom: 2px dotted #858585;
   transform: rotate(-3deg);

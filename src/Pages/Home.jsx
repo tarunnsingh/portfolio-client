@@ -28,7 +28,7 @@ const Home = () => {
       <Grid item xs={12}>
         <IntroSection />
       </Grid>
-      <Grid item xs={10} className={classes.aboutmestyle}>
+      <Grid item>
         <AboutMe />
       </Grid>
       <Grid item>
