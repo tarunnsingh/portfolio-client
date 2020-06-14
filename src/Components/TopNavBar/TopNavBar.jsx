@@ -12,6 +12,7 @@ import Brightness4OutlinedIcon from "@material-ui/icons/Brightness4Outlined";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import bannerImage from "../../Static/banner.jpg";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -83,9 +84,19 @@ const TopNavBar = () => {
               TransitionProps={{ timeout: 600 }}
               title="Contact"
             >
-              <IconButton>
-                <ContactPhoneIcon />
-              </IconButton>
+              <Link
+                to="contact"
+                smooth
+                duration={2000}
+                offset={50}
+                duration={500}
+                delay={300}
+                isDynamic={true}
+              >
+                <IconButton>
+                  <ContactPhoneIcon />
+                </IconButton>
+              </Link>
             </Tooltip>
             <Tooltip
               TransitionComponent={Fade}

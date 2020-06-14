@@ -1,79 +1,57 @@
 import React from "react";
 import { Paper, Grid, Typography } from "@material-ui/core";
-import Image from "material-ui-image";
 import { makeStyles } from "@material-ui/styles";
+import Carousel from "react-images";
+import ImageOne from "../../Static/banner.jpg";
+import ImageTwo from "../../Static/bg1.jpg";
+import ImageThree from "../../Static/bg2.jpg";
+const images = [
+  { source: ImageOne },
+  { source: ImageTwo },
+  { source: ImageThree },
+];
 
 const useStyles = makeStyles((theme) => ({
   textContent: {
     marginLeft: "auto",
   },
+  textHeading: {
+    textAlign: "center",
+    padding: "15px 10px",
+  },
+  paperStyle: {
+    background: "rgba(186, 114, 78, 0.1)",
+    borderRadius: "50px 50px",
+  },
+  carouselViews: {
+    height: 500,
+    width: 200,
+  },
 }));
 
-const AchievementsPaper = () => {
+const AchievementsPaper = (props) => {
+  const { name, date, body } = props.info;
   const classes = useStyles();
   return (
     <Grid container direction="row" spacing={3}>
-      <Grid item xs={1} />
-      <Grid item xs={10}>
-        <Paper elevation={3}>
-          <Typography>Visit to Harvard (HPAIR 2020)</Typography>
-          <img
-            src={`https://media.gettyimages.com/photos/harvard-church-on-harvard-campus-boston-massachusetts-picture-id522799080?s=612x612`}
-            width="50vw"
-          />
-
-          <Typography className={classes.textContent}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis
-            vitae et leo duis. Feugiat vivamus at augue eget arcu dictum varius
-            duis at. Consectetur lorem donec massa sapien faucibus et. Mauris
-            pellentesque pulvinar pellentesque habitant morbi tristique senectus
-            et netus. Sagittis eu volutpat odio facilisis. Nunc mi ipsum
-            faucibus vitae. Lectus urna duis convallis convallis tellus id
-            interdum velit laoreet. Adipiscing at in tellus integer feugiat
-            scelerisque varius morbi. Posuere morbi leo urna molestie at
-            elementum. Purus in mollis nunc sed id semper risus in hendrerit. At
-            auctor urna nunc id cursus metus aliquam. Risus quis varius quam
-            quisque. Ornare suspendisse sed nisi lacus. Urna neque viverra justo
-            nec ultrices. Gravida rutrum quisque non tellus orci ac auctor.
-            Dolor morbi non arcu risus quis varius. Sagittis aliquam malesuada
-            bibendum arcu. Curabitur gravida arcu ac tortor dignissim convallis
-            aenean et.
-          </Typography>
+      <Grid item xs={1} md={2} />
+      <Grid item container xs={10} md={8} direction="column">
+        <Paper elevation={3} className={classes.paperStyle}>
+          <Grid item>
+            <Typography variant="h5" className={classes.textHeading}>
+              {name}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Carousel views={images} />
+          </Grid>
+          <Grid item>
+            <Typography className={classes.textContent}>{body}</Typography>
+            <Typography variant="caption">{date}</Typography>
+          </Grid>
         </Paper>
       </Grid>
-      <Grid item xs={1} />
-
-      <Grid item xs={1} />
-      <Grid item xs={10}>
-        <Paper elevation={3}>
-          <Typography>Alexa Student Influencer</Typography>
-          <img
-            src={`https://media.gettyimages.com/photos/harvard-church-on-harvard-campus-boston-massachusetts-picture-id522799080?s=612x612`}
-            width="350px"
-          />
-
-          <Typography className={classes.textContent}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis
-            vitae et leo duis. Feugiat vivamus at augue eget arcu dictum varius
-            duis at. Consectetur lorem donec massa sapien faucibus et. Mauris
-            pellentesque pulvinar pellentesque habitant morbi tristique senectus
-            et netus. Sagittis eu volutpat odio facilisis. Nunc mi ipsum
-            faucibus vitae. Lectus urna duis convallis convallis tellus id
-            interdum velit laoreet. Adipiscing at in tellus integer feugiat
-            scelerisque varius morbi. Posuere morbi leo urna molestie at
-            elementum. Purus in mollis nunc sed id semper risus in hendrerit. At
-            auctor urna nunc id cursus metus aliquam. Risus quis varius quam
-            quisque. Ornare suspendisse sed nisi lacus. Urna neque viverra justo
-            nec ultrices. Gravida rutrum quisque non tellus orci ac auctor.
-            Dolor morbi non arcu risus quis varius. Sagittis aliquam malesuada
-            bibendum arcu. Curabitur gravida arcu ac tortor dignissim convallis
-            aenean et.
-          </Typography>
-        </Paper>
-      </Grid>
-      <Grid item xs={1} />
+      <Grid item xs={1} md={2} />
     </Grid>
   );
 };
