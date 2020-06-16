@@ -38,8 +38,8 @@ const Home = () => {
       <Grid item>
         <Achievements />
       </Grid>
-      <Grid item>What else?</Grid>
-      <Grid item>My thoughts / theories</Grid>
+      {/* <Grid item>What else?</Grid>
+      <Grid item>My thoughts / theories</Grid> */}
       <Grid item>
         <Contact />
       </Grid>

@@ -1,0 +1,9 @@
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100% !important;
+  height: 25px !important ;
+  background: rgba(0, 0, 0, 0.568);
+  filter: opacity(0.5);
+}
