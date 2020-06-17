@@ -30,7 +30,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ContactPaper.module.css";
 import { makeStyles } from "@material-ui/styles";
 import Footer from "../Footer/Footer";
-
+import theme from "../../theme";
 const mediaList = [
   {
     icon: faGithub,
@@ -58,12 +58,24 @@ const mediaList = [
   },
 ];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   form: {
     margin: 5,
     width: "50vw",
   },
-});
+  socialButtons: {
+    transition: "all ease-in-out 0.25s",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+  persoalDetails: {
+    transition: "all ease-in-out 0.25s",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+}));
 
 const ContactPaper = () => {
   const [media, setMedia] = useState([]);
@@ -71,6 +83,7 @@ const ContactPaper = () => {
   useEffect(() => {
     setMedia(mediaList);
   }, []);
+
   return (
     <>
       <Grid
@@ -98,18 +111,18 @@ const ContactPaper = () => {
           <Divider />
           <br />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={10} className={classes.persoalDetails}>
           <Typography component="span" variant="subtitle1">
             <FontAwesomeIcon icon={faMapMarkerAlt} /> Jaipur, Rajasthan, India.
             #302031
           </Typography>
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={10} className={classes.persoalDetails}>
           <Typography component="span" variant="subtitle1">
             <FontAwesomeIcon icon={faEnvelope} /> tarunnsingh2019@gmail.com
           </Typography>
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={10} className={classes.persoalDetails}>
           <Typography component="span" variant="subtitle1">
             <FontAwesomeIcon icon={faPhoneAlt} /> 9917360131
           </Typography>
@@ -126,8 +139,12 @@ const ContactPaper = () => {
             ? null
             : media.map((social, idx) => {
                 return (
-                  <IconButton key={idx}>
-                    <FontAwesomeIcon icon={social.icon} href={social.url} />
+                  <IconButton
+                    key={idx}
+                    className={classes.socialButtons}
+                    href={social.url}
+                  >
+                    <FontAwesomeIcon icon={social.icon} />
                   </IconButton>
                 );
               })}

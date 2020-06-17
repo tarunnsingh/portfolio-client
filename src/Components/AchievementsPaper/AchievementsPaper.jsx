@@ -2,15 +2,7 @@ import React from "react";
 import { Paper, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Carousel from "react-images";
-import ImageOne from "../../Static/banner.jpg";
-import ImageTwo from "../../Static/bg1.jpg";
-import ImageThree from "../../Static/bg2.jpg";
 import "./AchievementsPaper.module.css";
-const images = [
-  { source: ImageOne },
-  { source: ImageTwo },
-  { source: ImageThree },
-];
 
 const useStyles = makeStyles((theme) => ({
   textHeading: {
@@ -34,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AchievementsPaper = (props) => {
-  const { name, date, body } = props.info;
+  const { name, date, body, images } = props.info;
   const classes = useStyles();
   return (
     <Grid container direction="row" spacing={3}>

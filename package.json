@@ -2,7 +2,7 @@
   "name": "portfolio-new",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tarunnsingh.github.io/site",
+  "homepage": "https://tarunnsingh.github.io/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -22,6 +22,8 @@
     "react-images": "^1.1.7",
     "react-loader-spinner": "^3.1.14",
     "react-modal-video": "^1.2.3",
+    "react-parallax": "^3.0.3",
+    "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
     "react-spring": "^8.0.27",
