@@ -73,7 +73,8 @@ const ProjectCard = (props) => {
               <Typography variant="body2" color="textSecondary" component="p">
                 {description}
               </Typography>
-              <Divider variant="inset" component="li" />
+              <br />
+              <Divider />
               <Typography>{labels.map((label) => label + " ")}</Typography>
             </CardContent>
           </CardActionArea>

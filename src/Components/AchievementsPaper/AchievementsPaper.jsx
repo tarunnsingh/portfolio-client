@@ -5,6 +5,7 @@ import Carousel from "react-images";
 import ImageOne from "../../Static/banner.jpg";
 import ImageTwo from "../../Static/bg1.jpg";
 import ImageThree from "../../Static/bg2.jpg";
+import "./AchievementsPaper.module.css";
 const images = [
   { source: ImageOne },
   { source: ImageTwo },
@@ -12,12 +13,15 @@ const images = [
 ];
 
 const useStyles = makeStyles((theme) => ({
-  textContent: {
-    marginLeft: "auto",
-  },
   textHeading: {
+    transition: "all ease-in 1s",
+
+    "&:hover": {
+      color: "#feceab",
+      textShadow: "2px 1px #2F4F4F",
+    },
     textAlign: "center",
-    padding: "15px 10px",
+    paddingTop: "30px",
   },
   paperStyle: {
     background: "rgba(186, 114, 78, 0.1)",
@@ -46,7 +50,7 @@ const AchievementsPaper = (props) => {
             <Carousel views={images} />
           </Grid>
           <Grid item>
-            <Typography className={classes.textContent}>{body}</Typography>
+            <Typography className="textContent">{body}</Typography>
             <Typography variant="caption">{date}</Typography>
           </Grid>
         </Paper>

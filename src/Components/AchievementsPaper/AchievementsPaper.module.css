@@ -1,0 +1,19 @@
+.textContent {
+  margin-left: auto;
+  font-family: Exo;
+}
+.textHeading {
+  text-align: "center";
+  padding: "15px 10px";
+  font-family: Raleway;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: local("Exo"), url(../../Fonts/Exo-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"), url(../../Fonts/Raleway-Regular.ttf) format("truetype");
+}

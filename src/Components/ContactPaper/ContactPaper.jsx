@@ -9,6 +9,7 @@ import {
   Button,
   TextField,
   Divider,
+  Typography,
 } from "@material-ui/core";
 import {
   faGithub,
@@ -18,6 +19,11 @@ import {
   faMedium,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faMapMarkerAlt,
+  faEnvelope,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -89,7 +95,31 @@ const ContactPaper = () => {
 
             <Button type="submit">Send</Button>
           </FormControl>
-          <Divider variant="inset" />
+          <Divider />
+          <br />
+        </Grid>
+        <Grid item xs={10}>
+          <Typography component="span" variant="subtitle1">
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> Jaipur, Rajasthan, India.
+            #302031
+          </Typography>
+        </Grid>
+        <Grid item xs={10}>
+          <Typography component="span" variant="subtitle1">
+            <FontAwesomeIcon icon={faEnvelope} /> tarunnsingh2019@gmail.com
+          </Typography>
+        </Grid>
+        <Grid item xs={10}>
+          <Typography component="span" variant="subtitle1">
+            <FontAwesomeIcon icon={faPhoneAlt} /> 9917360131
+          </Typography>
+        </Grid>
+
+        <br />
+        <Grid item xs={10}>
+          <Typography variant="overline">
+            Leave a message or connect on other platforms
+          </Typography>
         </Grid>
         <Grid item xs={10}>
           {!media
