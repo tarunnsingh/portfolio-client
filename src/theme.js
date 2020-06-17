@@ -22,7 +22,7 @@ const theme = createMuiTheme({
       "BlinkMacSystemFont",
       '"Segoe UI"',
       "Roboto",
-      "Allura",
+
       '"Helvetica Neue"',
       "Arial",
       "sans-serif",
