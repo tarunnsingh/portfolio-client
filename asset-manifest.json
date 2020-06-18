@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.19bbe15b.chunk.css",
-    "main.js": "/static/js/main.6f3208ce.chunk.js",
-    "main.js.map": "/static/js/main.6f3208ce.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1067d15c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1067d15c.js.map",
-    "static/js/2.650573e0.chunk.js": "/static/js/2.650573e0.chunk.js",
-    "static/js/2.650573e0.chunk.js.map": "/static/js/2.650573e0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.5705b17e9b1cf160d44fbe5c94cb9807.js": "/precache-manifest.5705b17e9b1cf160d44fbe5c94cb9807.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.19bbe15b.chunk.css.map": "/static/css/main.19bbe15b.chunk.css.map",
-    "static/js/2.650573e0.chunk.js.LICENSE.txt": "/static/js/2.650573e0.chunk.js.LICENSE.txt",
-    "static/media/braceHeading.module.css": "/static/media/Raleway-Black.46818ebd.ttf",
-    "static/media/AchievementsPaper.module.css": "/static/media/Raleway-Regular.9942588a.ttf",
-    "static/media/banner.jpg": "/static/media/banner.9c94b40b.jpg",
-    "static/media/bg2.jpg": "/static/media/bg2.b1ff99c4.jpg"
+    "main.css": "/site/static/css/main.27730ba5.chunk.css",
+    "main.js": "/site/static/js/main.6f3208ce.chunk.js",
+    "main.js.map": "/site/static/js/main.6f3208ce.chunk.js.map",
+    "runtime-main.js": "/site/static/js/runtime-main.94dfcbf7.js",
+    "runtime-main.js.map": "/site/static/js/runtime-main.94dfcbf7.js.map",
+    "static/js/2.650573e0.chunk.js": "/site/static/js/2.650573e0.chunk.js",
+    "static/js/2.650573e0.chunk.js.map": "/site/static/js/2.650573e0.chunk.js.map",
+    "index.html": "/site/index.html",
+    "precache-manifest.e982ef90ee3e1a9563b59a3e35304f16.js": "/site/precache-manifest.e982ef90ee3e1a9563b59a3e35304f16.js",
+    "service-worker.js": "/site/service-worker.js",
+    "static/css/main.27730ba5.chunk.css.map": "/site/static/css/main.27730ba5.chunk.css.map",
+    "static/js/2.650573e0.chunk.js.LICENSE.txt": "/site/static/js/2.650573e0.chunk.js.LICENSE.txt",
+    "static/media/braceHeading.module.css": "/site/static/media/Raleway-Black.46818ebd.ttf",
+    "static/media/AchievementsPaper.module.css": "/site/static/media/Raleway-Regular.9942588a.ttf",
+    "static/media/banner.jpg": "/site/static/media/banner.9c94b40b.jpg",
+    "static/media/bg2.jpg": "/site/static/media/bg2.b1ff99c4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1067d15c.js",
+    "static/js/runtime-main.94dfcbf7.js",
     "static/js/2.650573e0.chunk.js",
-    "static/css/main.19bbe15b.chunk.css",
+    "static/css/main.27730ba5.chunk.css",
     "static/js/main.6f3208ce.chunk.js"
   ]
 }
