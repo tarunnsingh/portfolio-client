@@ -30,6 +30,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ContactPaper.module.css";
 import { makeStyles } from "@material-ui/styles";
 import Footer from "../Footer/Footer";
+import MessageService from "../../Services/MessageService";
 import theme from "../../theme";
 const mediaList = [
   {
@@ -79,11 +80,52 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactPaper = () => {
   const [media, setMedia] = useState([]);
+  const [message, setMessage] = useState({
+    email: "",
+    msgBody: "",
+  });
+  const [messageSent, setMessageSent] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+
+  const handleOnChange = (event) => {
+    setMessage({ ...message, [event.target.name]: event.target.value });
+    if (message.email.length > 6 && message.msgBody.length > 2) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("INSIDE SUBMIT");
+    MessageService.sendMessage(message).then((res) => {
+      console.log("Got REspponse", res.data);
+      if (res.data.sent) {
+        setMessageSent(true);
+        resetForm();
+        setTimeout(() => {
+          setMessageSent(false);
+        }, 5000);
+      } else {
+        console.log("Some ERROR");
+      }
+    });
+  };
+
+  const resetForm = () => {
+    setMessage({
+      email: "",
+      msgBody: "",
+    });
+    setDisabled(true);
+  };
+
   const classes = useStyles();
   useEffect(() => {
     setMedia(mediaList);
   }, []);
-
+  console.log(message);
   return (
     <>
       <Grid
@@ -96,7 +138,12 @@ const ContactPaper = () => {
         <Grid item xs={10}>
           <FormControl className={classes.form}>
             <InputLabel htmlFor="email">Your Email</InputLabel>
-            <Input id="email" />
+            <Input
+              id="email"
+              name="email"
+              value={message.email}
+              onChange={(e) => handleOnChange(e)}
+            />
             <br />
             <TextField
               id="message"
@@ -104,9 +151,27 @@ const ContactPaper = () => {
               multiline
               rows={5}
               variant="outlined"
+              name="msgBody"
+              value={message.msgBody}
+              onChange={(e) => handleOnChange(e)}
             />
-
-            <Button type="submit">Send</Button>
+            {messageSent ? (
+              <Typography
+                variant="caption"
+                style={{
+                  textAlign: "center",
+                  height: "30px",
+                  paddingTop: "5px",
+                }}
+              >
+                Message Sent!
+              </Typography>
+            ) : (
+              <span style={{ height: "30px" }}> </span>
+            )}
+            <Button type="submit" disabled={disabled} onClick={handleSubmit}>
+              Send
+            </Button>
           </FormControl>
           <Divider />
           <br />
