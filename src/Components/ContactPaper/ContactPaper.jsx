@@ -26,11 +26,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ContactPaper.module.css";
 import { makeStyles } from "@material-ui/styles";
 import Footer from "../Footer/Footer";
 import MessageService from "../../Services/MessageService";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import theme from "../../theme";
 const mediaList = [
   {
@@ -86,6 +87,7 @@ const ContactPaper = () => {
   });
   const [messageSent, setMessageSent] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  const [spinner, setSpinner] = useState(false);
 
   const handleOnChange = (event) => {
     setMessage({ ...message, [event.target.name]: event.target.value });
@@ -97,6 +99,7 @@ const ContactPaper = () => {
   };
 
   const handleSubmit = (e) => {
+    setSpinner(true);
     e.preventDefault();
     console.log("INSIDE SUBMIT");
     MessageService.sendMessage(message).then((res) => {
@@ -119,6 +122,7 @@ const ContactPaper = () => {
       msgBody: "",
     });
     setDisabled(true);
+    setSpinner(false);
   };
 
   const classes = useStyles();
@@ -158,6 +162,7 @@ const ContactPaper = () => {
             {messageSent ? (
               <Typography
                 variant="caption"
+                component="span"
                 style={{
                   textAlign: "center",
                   height: "30px",
@@ -169,9 +174,15 @@ const ContactPaper = () => {
             ) : (
               <span style={{ height: "30px" }}> </span>
             )}
-            <Button type="submit" disabled={disabled} onClick={handleSubmit}>
-              Send
-            </Button>
+            {spinner ? (
+              <span style={{ textAlign: "center", height: "35px" }}>
+                <FontAwesomeIcon icon={faSpinner} spin size="2x" />
+              </span>
+            ) : (
+              <Button type="submit" disabled={disabled} onClick={handleSubmit}>
+                Send
+              </Button>
+            )}
           </FormControl>
           <Divider />
           <br />
