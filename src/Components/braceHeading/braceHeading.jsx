@@ -11,7 +11,7 @@ const BraceHeading = (props) => {
   }, []);
   console.log("PROPS IN CONTACT HEAD: ", props);
   return (
-    <div className={styles.container} id="contact">
+    <div className={styles.container}>
       <div className={styles.document}>
         <h1>{name}</h1>
         <hr className={styles.brace} />

@@ -5,13 +5,14 @@ import HiIntro from "../Components/HiIntro/HiIntro";
 import { makeStyles } from "@material-ui/styles";
 import theme from "../theme";
 import { ParallaxLayer, Parallax } from "react-spring/renderprops-addons";
+import ScrollDown from "../Components/ScrollDown/ScrollDown";
 
 const useStyles = makeStyles((theme) => ({
   gutterUp: {
-    minHeight: "30vh",
+    minHeight: "31vh",
   },
   gutterDown: {
-    minHeight: "52vh",
+    minHeight: "42vh",
   },
   typer: {
     color: "white",
@@ -36,6 +37,8 @@ const IntroSection = () => {
         <TypingIntro />
       </Grid>
       <Grid item className={classes.gutterDown} />
+
+      <ScrollDown />
     </Grid>
     // </ParallaxLayer>
   );

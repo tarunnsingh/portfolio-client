@@ -30,15 +30,7 @@ const HiIntro = () => {
       <em>
         <TextLoop
           className={classes.loop}
-          children={[
-            "Hi!",
-            "Hoi!",
-            "你好!",
-            "Hola!",
-            "Ciao!",
-            "Salve!",
-            "Bonjour!",
-          ]}
+          children={["Hi!", "Hola!", "Ciao!", "Salve!", "Bonjour!"]}
           interval={5000}
           springConfig={{ stiffness: 180, damping: 15 }}
         />

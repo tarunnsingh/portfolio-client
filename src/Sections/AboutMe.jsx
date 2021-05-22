@@ -36,17 +36,27 @@ const AboutMe = () => {
       <Grid item xs={1} />
       <Grid item xs={10}>
         <Typography className={classes.aboutText}>
-          Hi, I am Tarun. Currently persuing B.Tech (CSE) from The LNM Institute
-          of Information Technology, Jaipur. I work in MERN Stack for
-          development and also love to explore the concepts of Data Science.
-          Currently persuing B.Tech (CSE) from The LNM Institute of Information
-          Technology, Jaipur. I work in MERN Stack for development and also love
-          to explore the concepts of Data Science. Currently persuing B.Tech
-          (CSE) from The LNM Institute of Information Technology, Jaipur. I work
-          in MERN Stack for development and also love to explore the concepts of
-          Data Science.Currently persuing B.Tech (CSE) from The LNM Institute of
-          Information Technology, Jaipur. I work in MERN Stack for development
-          and also love to explore the concepts of Data Science.
+          Hi I am Tarun Singh, an aspiring engineer currently pursuing B.Tech
+          (CSE) from the LNM Institute of Information Technology, Jaipur (IN).
+          In this journey of mine I have explored and experimented quite a few
+          tech as well as non-tech domains. I also like taking new challenges
+          and of course meet new people. Talking of my tech stack, as a
+          developer I like creating and working with Web Development. I do have
+          sound knowledge and grasp over the MERN Stack (check projects below).
+          I believe React is one of those frameworks, which literally teaches
+          you a lot and is parallely interseting. With this stack, I am always
+          curious and looking out for new project ideas. In the due course of
+          college I also have worked in Data Science domain. ML/DL has a
+          prominent and extensive use in current apps and is growing
+          exponentilly. I have done quite many courses in DS like Deep Learning
+          Specialisation, Computer Vision etc. Although I am still in the
+          process of learning ML frameworks like Tensorflow (PyTorch? No, not at
+          the moment) but I do have a good hold over the basics. I have mostly
+          worked on EDA and Data Visualisation which have improved my
+          understanding of the fundamentals. Alongside, I have worked in
+          voice-tech domain like Amazon Alexa and the Google Actions. In past
+          few years I also have developed a keen interest of film-making and
+          video-editing which I do as a hobby!
         </Typography>
       </Grid>
       <Grid item xs={1} />

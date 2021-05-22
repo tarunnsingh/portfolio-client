@@ -1,6 +1,10 @@
 .textContent {
   margin-left: auto;
   font-family: Exo;
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: rgb(211, 211, 211);
 }
 .textHeading {
   text-align: "center";

@@ -55,11 +55,9 @@ const TopNavBar = () => {
             title={
               <React.Fragment>
                 <Typography color="inherit">Hi! Hope you're good!</Typography>
-                <img src={bannerImage} width="200vw" /> <br />
-                {/* <em>{"And here's"}</em> <b>{"some"}</b>{" "}
-                <u>{"amazing content"}</u>.{" "} */}
+                <br />
                 {
-                  "Scroll through and let me know if you would like to talk. Have a nice day!"
+                  "Scroll through my work, we'll have a word just drop me a message. Have a nice day!"
                 }
               </React.Fragment>
             }
@@ -68,7 +66,6 @@ const TopNavBar = () => {
               <AccountCircleIcon />
             </IconButton>
           </HtmlTooltip>
-          <Typography variant="button">Website in the Making</Typography>
           <div className={classes.end}>
             <Tooltip
               TransitionComponent={Fade}
@@ -97,15 +94,6 @@ const TopNavBar = () => {
                   <ContactPhoneIcon />
                 </IconButton>
               </Link>
-            </Tooltip>
-            <Tooltip
-              TransitionComponent={Fade}
-              TransitionProps={{ timeout: 600 }}
-              title="Switch Theme"
-            >
-              <IconButton>
-                <Brightness4Icon />
-              </IconButton>
             </Tooltip>
           </div>
         </Toolbar>

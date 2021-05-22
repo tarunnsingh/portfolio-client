@@ -6,8 +6,10 @@ import BraceHeading from "../Components/braceHeading/braceHeading";
 const Contact = () => {
   return (
     <>
-      <BraceHeading name={"Contact"} />
-      <ContactPaper />
+      <div id="contact">
+        <BraceHeading name={"Contact"} />
+        <ContactPaper />
+      </div>
     </>
   );
 };

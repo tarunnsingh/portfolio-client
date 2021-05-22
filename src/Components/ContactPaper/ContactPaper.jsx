@@ -18,6 +18,7 @@ import {
   faLinkedin,
   faMedium,
   faTwitter,
+  faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faMapMarkerAlt,
@@ -211,19 +212,28 @@ const ContactPaper = () => {
           </Typography>
         </Grid>
         <Grid item xs={10}>
-          {!media
-            ? null
-            : media.map((social, idx) => {
-                return (
-                  <IconButton
-                    key={idx}
-                    className={classes.socialButtons}
-                    href={social.url}
-                  >
-                    <FontAwesomeIcon icon={social.icon} />
-                  </IconButton>
-                );
-              })}
+          <span>
+            {!media
+              ? null
+              : media.map((social, idx) => {
+                  return (
+                    <IconButton
+                      key={idx}
+                      className={classes.socialButtons}
+                      href={social.url}
+                    >
+                      <FontAwesomeIcon icon={social.icon} />
+                    </IconButton>
+                  );
+                })}{" "}
+            |{" "}
+            <IconButton
+              className={classes.socialButtons}
+              href="https://www.instagram.com/1.9_shots/"
+            >
+              <FontAwesomeIcon icon={faInstagramSquare} />
+            </IconButton>
+          </span>
         </Grid>
         <br />
         <br />
